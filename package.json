@@ -1,0 +1,24 @@
+{
+  "name": "bundlr-service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1hive/bundlr-service.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RosetteProtocol/bundlr-service/issues"
+  },
+  "homepage": "https://github.com/RosetteProtocol/bundlr-service#readme",
+  "dependencies": {
+    "@bundlr-network/client": "^0.7.15",
+    "bignumber.js": "^9.0.2"
+  }
+}
