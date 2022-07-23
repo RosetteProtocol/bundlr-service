@@ -9,6 +9,7 @@ const {
   PRIVATE_KEY,
   BUNDLR_URI,
   BUNDLR_FEE_TOKEN,
+  ETH_URI,
   INTERVAL = ONE_HOUR
 } = process.env
 
@@ -33,10 +34,13 @@ if (!INTERVAL) {
 }
 
 // Set up bundlr
-const bundlr = new Bundlr.default(BUNDLR_URI, BUNDLR_FEE_TOKEN, PRIVATE_KEY);
+const bundlr = new Bundlr.default(BUNDLR_URI, BUNDLR_FEE_TOKEN, PRIVATE_KEY, {
+  // for test networks
+  providerUrl: ETH_URI ?? "",
+});
 
 // Run information
-logger.info(`Acting as ${wallet.address}`)
+logger.info(`Acting as ${bundlr.address}`)
 logger.info(`Connected to ${BUNDLR_URI}`)
 logger.info(`Calling service every ${INTERVAL}ms`)
 
